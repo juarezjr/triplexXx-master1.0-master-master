@@ -92,12 +92,15 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Ativar = new System.Windows.Forms.CheckBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.entradaCodigo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,7 +228,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(339, 26);
+            this.label7.Location = new System.Drawing.Point(205, 33);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(311, 29);
             this.label7.TabIndex = 15;
@@ -235,7 +238,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(339, 82);
+            this.label8.Location = new System.Drawing.Point(216, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 20);
             this.label8.TabIndex = 16;
@@ -247,7 +250,7 @@
             this.entradaIDLit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.entradaIDLit.Font = new System.Drawing.Font("Microsoft Tai Le", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.entradaIDLit.ForeColor = System.Drawing.Color.White;
-            this.entradaIDLit.Location = new System.Drawing.Point(411, 82);
+            this.entradaIDLit.Location = new System.Drawing.Point(288, 87);
             this.entradaIDLit.Name = "entradaIDLit";
             this.entradaIDLit.Size = new System.Drawing.Size(189, 24);
             this.entradaIDLit.TabIndex = 17;
@@ -315,6 +318,7 @@
             this.entradaCpf.Name = "entradaCpf";
             this.entradaCpf.Size = new System.Drawing.Size(202, 23);
             this.entradaCpf.TabIndex = 25;
+            this.entradaCpf.TextChanged += new System.EventHandler(this.entradaCpf_TextChanged);
             // 
             // entradaCelular
             // 
@@ -713,6 +717,32 @@
             this.Ativar.Text = "Desativar";
             this.Ativar.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::metodosMySql.Properties.Resources.photo_icon;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.Enabled = false;
+            this.button7.Location = new System.Drawing.Point(542, 69);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(40, 38);
+            this.button7.TabIndex = 70;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::metodosMySql.Properties.Resources.blank_user;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.ErrorImage = global::metodosMySql.Properties.Resources.blank_user;
+            this.pictureBox2.InitialImage = global::metodosMySql.Properties.Resources.blank_user;
+            this.pictureBox2.Location = new System.Drawing.Point(594, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(121, 114);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 69;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.SystemColors.Window;
@@ -731,7 +761,7 @@
             this.pictureBox1.Image = global::metodosMySql.Properties.Resources.lit;
             this.pictureBox1.Location = new System.Drawing.Point(12, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 141);
+            this.pictureBox1.Size = new System.Drawing.Size(178, 141);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
@@ -741,7 +771,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.Menu;
             this.button2.BackgroundImage = global::metodosMySql.Properties.Resources.search_148820_960_720;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(599, 73);
+            this.button2.Location = new System.Drawing.Point(476, 78);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 38);
             this.button2.TabIndex = 11;
@@ -756,6 +786,8 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(737, 733);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Ativar);
@@ -831,6 +863,7 @@
             this.groupBox2.PerformLayout();
             this.entradaCodigo.ResumeLayout(false);
             this.entradaCodigo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -906,6 +939,8 @@
         private System.Windows.Forms.RadioButton radiovoluntario;
         private System.Windows.Forms.RadioButton radioremunerado;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button7;
     }
 }
 
