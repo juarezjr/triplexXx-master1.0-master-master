@@ -477,6 +477,18 @@ namespace metodosMySql
         private void Form1_Load(object sender, EventArgs e)
         {
             conectar.Open();
+            string consulta = "select cod_digital, nome from pessoas, bolsistas where pessoas.id = bolsistas.pessoa_id order by cod_digital;";
+            MySqlCommand comandolistbox = new MySqlCommand(consulta, conectar);
+            MySqlDataReader leitor;
+            leitor = comandolistbox.ExecuteReader();
+
+            while(leitor.Read())
+            {
+                listaBolsistas.Items.Add("<" + leitor.GetString("cod_digital") + "> - " + leitor.GetString("nome"));
+            }
+            conectar.Close();
+
+            conectar.Open();
             MySqlDataReader reader;
             MySqlDataReader reader2;
             string projetos = "select nome from projetos;";
